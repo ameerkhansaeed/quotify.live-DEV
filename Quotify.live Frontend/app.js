@@ -1,17 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var header = document.getElementById("main-header");
-
-  window.onscroll = function () {
-    // Adding the "scrolled" class to the header when the user scrolls down
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      header.classList.add("scrolled");
-    } else {
-      // Removing the "scrolled" class when the user scrolls back to the top
-      header.classList.remove("scrolled");
-    }
-  };
-});
-
 const menu_btn = document.querySelector('.hamburger');
 const mobile_menu = document.querySelector('.mobile_nav');
 
