@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 /* variables */
 :root{
   --background-color: #f4f3ee;
@@ -30,10 +31,13 @@ a, a:link {
 
 /* base styles */
 body {
+  display: grid;
+  margin: 0 auto;
   max-width: 1920px;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   color: var(--text-color);
+  grid-template-rows: 1fr auto;
   min-height: 100vh;
 }
 
@@ -63,8 +67,11 @@ input:focus {
 
 /* mobile styles */
 header {
-  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   min-height: 2rem;
+  position: absolute;
+  top: 0;
   padding: 5px 5px;
   font-size: 2rem;
   font-weight: 600;
@@ -141,7 +148,7 @@ header img {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   width: 75%;
@@ -295,9 +302,8 @@ header img {
 .information {
   display: grid;
   width: 80%;
-  margin: 3rem auto;
+  margin: 0 auto;
   text-align: center;
-  justify-content: center;
   width: 80%;
   padding: 4rem 0;
   border-bottom: 1px solid #ffffff5a;
@@ -346,33 +352,190 @@ header img {
 
 footer {
   border-top: 1px solid #ffffff5a;
-  margin-top: -3rem;
-  background-color: #ffffff4b;
-  min-height: 4rem;
+  min-height: 3rem;
   text-align: center;
   padding: 0.5rem 0;
   font-size: 1.3rem;
   font-weight: 500;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .social {
-  width: 30%;
+  width: 50%;
   margin: 0 auto;
+  padding: 0.5rem 0 0 0 ;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.2rem;
+  gap: 0.1rem;
 }
 
 .social_logo {
-  padding: 1rem;
-  width: 4rem;
+  padding: 0.2rem;
+  width: 2rem;
   border-radius: 50%;
-  transition: 0.2s ease-in-out;
-  border: 2px solid transparent;
+  transition: 50ms ease-in-out;
 }
 
 .social_logo:hover {
   border: 2px solid var(--text-color);
+  padding: 0.3rem;
+}
+
+/* Today's quote page */
+
+.todays_quote {
+  align-self: center;
+  text-align: center;
+  margin: 2rem auto 0;
+  padding: 3rem 1rem;
+  width: 80%;
+  line-height: 1.3;
+  min-height: 7rem;
+  font-family: "Forum", sans-serif;
+  border: 1px solid white;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0.5rem 0.5rem 1rem #0000003c;
+}
+
+.quote_header {
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 3px solid #98a3fa9d;
+  display: inline-block;
+  margin-bottom: 2rem;
+  border-radius: 0.2rem;
+}
+
+.quote {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 0 2rem 0;
+}
+
+.author {
+  font-size: 1rem;
+}
+
+/* Authors page */
+
+.authors_container {
+  padding-top: 5rem;
+  text-align: center;
+  width: 90%;
+  margin: 4rem auto;
+}
+
+.authors_header {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.authors_button {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.letters {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid white;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 1rem #0000003c;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.letters:hover, .letters:active {
+  background-color: #98a3fa9d;
+}
+
+.authors_card {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem 0;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.8em;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.authors_card > a {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  min-width: 80%;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+}
+
+.authors_card > a:hover {
+  background-color: #98a3fa9d;
+}
+
+/* Categories container */
+
+.categories_container {
+  padding-top: 5rem;
+  text-align: center;
+  width: 90%;
+  margin: 4rem auto;
+}
+
+.category_link {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  text-shadow: 1px 1px 1rem #0000003c;
+}
+
+/* Author's page */
+
+.main_container {
+  padding-top: 5rem;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.quote_container {
+  display: grid;
+  width: 100%;
+  margin-bottom: 1rem;
+  grid-template-columns: 1fr;
+  text-align: left;
+  font-weight: bold;
+  font-family: "Forum", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.text_align_left {
+  text-align: left;
+}
+
+.smaller {
+  font-size: 1.7rem;
+}
+
+.author_name {
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-underline-offset: 0.4rem;
 }
 
 /* small tablet styles */
@@ -386,12 +549,41 @@ footer {
     grid-column: 5/9;
   }
 
+  .todays_quote {
+    padding: 3rem 2rem;
+  }
+
   .hero {
     font-size: 3rem;
   }
   
   .hero_text {
     font-size: 1.2rem;
+  }
+
+  .quote {
+    font-size: 1.7rem;
+  }
+
+  .author {
+    font-size: 1.4rem;
+  }
+
+  .authors_card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .authors_card {
+    width: 75%;
+    justify-content: space-around;
+  }
+
+  .authors_card > a {
+    width: 100%;
+  }
+
+  .category_link {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -434,6 +626,34 @@ footer {
   .hero {
     font-size: 4rem;
   }
+
+  .social {
+    width: 20%;
+  }
+
+  .todays_quote {
+    padding: 3rem 0;
+  }
+
+  .quote {
+    margin: 0 auto;
+    width: 70%;
+    display: block;
+    font-size: 2rem;
+  }
+
+  .author {
+    font-size: 1.5rem;
+  }
+
+  .authors_card > a {
+    width: 75%;
+    justify-content: space-around;
+  }
+
+  .category_link {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* desktop styles */
@@ -456,9 +676,6 @@ footer {
   }
 
   .bouncing-blobs-glass {
-/*     position: absolute;
-    top: 0;
-    left: 0; */
     width: 100%;
     height: 100%;
     backdrop-filter: blur(120px);
@@ -498,5 +715,28 @@ footer {
     font-weight: 500;
     line-height: 1.3;
     letter-spacing: 0.5px;
+  }
+
+  .social {
+    width: 20%;
+  }
+
+  .todays_quote {
+    padding: 3rem 0;
+  }
+
+  .quote {
+    margin: 0 auto;
+    width: 70%;
+    display: block;
+    font-size: 2.2rem;
+  }
+
+  .author {
+    font-size: 1.6rem;
+  }
+
+  .category_link {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
