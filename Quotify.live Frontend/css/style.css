@@ -419,7 +419,7 @@ footer {
   font-size: 1rem;
 }
 
-/* Authors page */
+/* Authors list page */
 
 .authors_container {
   padding-top: 5rem;
@@ -522,6 +522,26 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+.quote_category_container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 100%;
+  display: flex;
+  margin: 0.5rem auto 0;
+  gap: 0.5rem;
+}
+
+.quote_category {
+  background-color: #98a3fa9d;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.5rem;
+  font-weight: 600;
+}
+
+.quote_category:hover {
+  background-color: #98a3fa;
 }
 
 .text_align_left {
@@ -654,6 +674,12 @@ footer {
   .category_link {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .main_container {
+    padding-top: 5rem;
+    width: 65%;
+    margin: 2rem auto;
+  }
 }
 
 /* desktop styles */
@@ -738,5 +764,9 @@ footer {
 
   .category_link {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .main_container {
+    width: 60%;
   }
 }
