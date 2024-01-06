@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotify.live - Quotes from all around the wolrd</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/pagination.css">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon_quotify.png">
+</head>
+<body>
+  <header class="grid" id="main-header">
+    <a href="/index.html" class="logo"><img class="grid" src="/assets/logo.png" alt="quotify logo"></span></a>
+    <ul class="navbar">
+      <li>
+        <div class="searchbox">
+          <input type="search" name="searchTerm" placeholder="Search...">
+          <button class="search_btn">
+            <img src="/assets/search.png" alt="search icon">
+          </button>
+        </div>
+      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="todays_quote.html">Today's Quote</a></li>
+      <li><a href="authors.html">Authors</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </ul>
+    <button id="toggleMenu" class="hamburger" type="button">
+      <div class="bar"></div>
+    </button>
+  </header>
+
+  <nav class="mobile_nav">
+    <div class="searchbox_mobile">
+      <input type="search" name="searchTerm" placeholder="Search...">
+      <button class="search_btn">
+        <img src="/assets/search.png" alt="search icon">
+      </button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="todays_quote.html">Today's Quote</a>
+    <a href="authors.html">Authors</a>
+    <a href="categories.html">Categories</a>
+  </nav>
+
+  <div class="bouncing-blobs-container">
+    <div class="bouncing-blobs-glass"></div>
+    <div class="bouncing-blobs">
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--white"></div>
+      <div class="bouncing-blob bouncing-blob--purple"></div>
+      <div class="bouncing-blob bouncing-blob--purple"></div>
+      <div class="bouncing-blob bouncing-blob--pink"></div>
+    </div>
+  </div>
+
+  <section class="authors_container">
+    <h1 class="authors_header">Authors</h1>
+    <div class="authors_button">
+
+      <!-- Each button opens a page with the author's quotes -->
+      <button class="letters">A</button>
+      <button class="letters">B</button>
+      <button class="letters">C</button>
+      <button class="letters">D</button>
+      <button class="letters">E</button>
+      <button class="letters">F</button>
+      <button class="letters">G</button>
+      <button class="letters">H</button>
+      <button class="letters">I</button>
+      <button class="letters">J</button>
+      <button class="letters">K</button>
+      <button class="letters">L</button>
+      <button class="letters">M</button>
+      <button class="letters">N</button>
+      <button class="letters">O</button>
+      <button class="letters">P</button>
+      <button class="letters">Q</button>
+      <button class="letters">R</button>
+      <button class="letters">S</button>
+      <button class="letters">T</button>
+      <button class="letters">U</button>
+      <button class="letters">V</button>
+      <button class="letters">W</button>
+      <button class="letters">X</button>
+      <button class="letters">Y</button>
+      <button class="letters">Z</button>
+    </div>
+
+    <div class="authors_list_container">
+      <h1 class="authors_header">Random 20 Authors</h1>
+
+      <!-- Randomly select 20 authors and display here -->
+      <div class="authors_card">
+        <a href="#">Saidamirxon S.</a>
+        <a href="#">Asad Farmonov</a>
+        <a href="#">Aziz Sabirov</a>
+        <a href="#">Abbos Pulat Komil</a>
+        <a href="#">Muhammadjon Boboev</a>
+        <a href="#">Suhrob Abdullaev</a>
+        <a href="#">Eduard Turganbaev</a>
+        <a href="#">Otabek Utarov</a>
+        <a href="#">Aziz Aka Zamdekan</a>
+        <a href="#">Sanjar Aka Bratan</a>
+        <a href="#">Humoyun Dekanat</a>
+        <a href="#">Yangi Zamdekan</a>
+        <a href="#">Yana Kimdur</a>
+        <a href="#">Boshqa Bittasi</a>
+        <a href="#">Will Smith</a>
+        <a href="#">Leo Messi</a>
+        <a href="#">Cristiano Ronaldo</a>
+        <a href="#">Zlatan Ibrahimovich</a>
+        <a href="#">Mirjalol Qosimov</a>
+        <a href="#">Ism Topolmadim</a>
+      </div>
+    </div>
+    
+  </section>
+
+  <div class="pagination_container">
+    <ul class="pagination">
+      <li><button class="page"><<</button></li>
+      <li><button class="page"><</button></li>
+      <li><button class="page">1</button></li>
+      <li><button class="page">2</button></li>
+      <li><button class="page">3</button></li>
+      <li><button class="page">></button></li>
+      <li><button class="page">>></button></li>
+    </ul>
+  </div>
+ 
+  <footer>
+    <ul class="social">
+      <li><a href="https://www.instagram.com/quotify.live"><img src="/assets/instagram-logo.png" alt="instagram" class="social_logo"></a></li>
+    </ul>
+  </footer>
+
+  <script src="/app.js"></script>
+  <script src="/pagination.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotify.live - Quotes from all around the wolrd</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon_quotify.png">
+</head>
+<body>
+  <header class="grid" id="main-header">
+    <a href="/index.html" class="logo"><img class="grid" src="/assets/logo.png" alt="quotify logo"></span></a>
+    <ul class="navbar">
+      <li>
+        <div class="searchbox">
+          <input type="search" name="searchTerm" placeholder="Search...">
+          <button class="search_btn">
+            <img src="/assets/search.png" alt="search icon">
+          </button>
+        </div>
+      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="todays_quote.html">Today's Quote</a></li>
+      <li><a href="authors.html">Authors</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </ul>
+    <button id="toggleMenu" class="hamburger" type="button">
+      <div class="bar"></div>
+    </button>
+  </header>
+
+  <nav class="mobile_nav">
+    <div class="searchbox_mobile">
+      <input type="search" name="searchTerm" placeholder="Search...">
+      <button class="search_btn">
+        <img src="/assets/search.png" alt="search icon">
+      </button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="todays_quote.html">Today's Quote</a>
+    <a href="authors.html">Authors</a>
+    <a href="categories.html">Categories</a>
+  </nav>
+
+  <div class="bouncing-blobs-container">
+    <div class="bouncing-blobs-glass"></div>
+    <div class="bouncing-blobs">
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--white"></div>
+      <div class="bouncing-blob bouncing-blob--purple"></div>
+      <div class="bouncing-blob bouncing-blob--purple"></div>
+      <div class="bouncing-blob bouncing-blob--pink"></div>
+    </div>
+  </div>
+
+  <div class="todays_quote">
+    <p class="quote_header">Today's Quote</p>
+    
+    <!-- This part should be imported for the Database -->
+    <p class="quote">"A man who has never gone to school may steal from a freight car; but if he has a university education, he may steal the whole railroad. asodk aosidj aosidj aoisd joahufi usdhfi suadfio asud fuysgdf sdifuhisdag fisduhf oisduf hiosduhf iaushf iosadufh iygeqwi fyisdougf iuds fguasdgyf sudygf iusdyg fisgdfiu adsg fuiasyg dfi A man who has never gone to school may steal from a freight car; but if he has a university education, he may steal the whole railroad. asodk aosidj aosidj aoisd joahufi usdhfi suadfio asud fuysgdf sdifuhisdag fisduhf oisduf hiosduhf iaushf iosadufh iygeqwi fyisdougf iuds fguasdgyf sudygf iusdyg fisgdfiu adsg fuiasyg dfi"</p>
+    <!-- When clickin on the author's name it should open author's page-->
+    <a href="#"><p class="author">- Theodore Roosevelt -</p></a>
+  </div>
+ 
+  <footer>
+    <ul class="social">
+      <li><a href="https://www.instagram.com/quotify.live"><img src="/assets/instagram-logo.png" alt="instagram" class="social_logo"></a></li>
+    </ul>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
