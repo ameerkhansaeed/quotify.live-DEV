@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotify.live - Quotes from all around the wolrd</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon_quotify.png">
+</head>
+<body>
+  <header class="grid" id="main-header">
+    <a href="/index.html" class="logo"><img class="grid" src="/assets/logo.png" alt="quotify logo"></span></a>
+    <ul class="navbar">
+      <li>
+        <!-- Search box for desktop design -->
+        <div class="searchbox">
+          <input type="search" name="searchTerm" placeholder="Search...">
+          <button class="search_btn">
+            <img src="/assets/search.png" alt="search icon">
+          </button>
+        </div>
+      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="todays_quote.html">Today's Quote</a></li>
+      <li><a href="authors.html">Authors</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </ul>
+    <button id="toggleMenu" class="hamburger" type="button">
+      <div class="bar"></div>
+    </button>
+  </header>
+
+  <nav class="mobile_nav">
+    <!-- Search box for mobile design -->
+    <div class="searchbox_mobile">
+      <input type="search" name="searchTerm" placeholder="Search...">
+      <button class="search_btn">
+        <img src="/assets/search.png" alt="search icon">
+      </button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="todays_quote.html">Today's Quote</a>
+    <a href="authors.html">Authors</a>
+    <a href="categories.html">Categories</a>
+  </nav>
+
+  <div class="bouncing-blobs-container">
+    <div class="bouncing-blobs-glass"></div>
+    <div class="bouncing-blobs">
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--blue"></div>
+      <div class="bouncing-blob bouncing-blob--white"></div>
+      <div class="bouncing-blob bouncing-blob--purple"></div>
+      <div class="bouncing-blob bouncing-blob--purple"></div>
+      <div class="bouncing-blob bouncing-blob--pink"></div>
+    </div>
+  </div>
+  
+  <div class="main_container">
+    <div class="quote_container">
+      <p>"There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle."</p>
+      <p class="quote_author"><a href="#">- Someone Else -</a></p>
+      <div class="quote_category_container">
+        <a href="#" class="quote_category">inspirational</a>
+        <a href="#" class="quote_category">life</a>
+      </div>
+    </div>
+    <div class="quote_container">
+      <p>"He who joyfully marches to music in rank and file has already earned my contempt. He has been given a large brain by mistake, since for him the spinal cord would suffice."</p>
+      <p class="quote_author"><a href="#">- Asad Farmonov -</a></p>
+      <div class="quote_category_container">
+        <a href="#" class="quote_category">phylosophy</a>
+      </div>
+    </div>
+    <div class="quote_container">
+      <p>"I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."</p>
+      <p class="quote_author"><a href="#">- Asad Farmonov -</a></p>
+      <div class="quote_category_container">
+        <a href="#" class="quote_category">inspirational</a>
+      </div>
+    </div>
+    <div class="quote_container">
+      <p>"If you can't explain it to a six year old, you don't understand it yourself."</p>
+      <p class="quote_author"><a href="#">- Asad Farmonov -</a></p>
+      <div class="quote_category_container">
+        <a href="#" class="quote_category">education</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <ul class="social">
+      <li><a href="https://www.instagram.com/quotify.live"><img src="/assets/instagram-logo.png" alt="instagram" class="social_logo"></a></li>
+    </ul>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -584,6 +584,14 @@ footer {
   background-color: #98a3fa;
 }
 
+.quote_author {
+  text-align: right;
+  margin: 0.5rem 2rem 0 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .text_align_left {
   text-align: left;
 }
