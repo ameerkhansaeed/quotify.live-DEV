@@ -133,7 +133,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'quotify/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 COMPRESS_ROOT = 'comp/'
 COMPRESS_ENABLED =True
-COMPRESS_OFFLINE = True
+COMPRESS_OFFLINE = False
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
