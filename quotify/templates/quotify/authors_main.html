@@ -1,0 +1,28 @@
+{% extends 'quotify/base.html' %}
+{% load static %}
+
+{% block title %}Quotify - Authors {% endblock %}
+
+{% block content %}
+
+  <section class="authors_container">
+      <!-- Each button opens a page with the author's quotes -->
+      <h1 class="authors_header">Authors</h1>
+      <div class="authors_button">
+  
+        <!-- Each button opens a page with the author's quotes -->
+        {% for letter in abc %}
+        <a href="{% url 'letters' letter %}"><button class="letters">{{letter}}</button></a>
+        {% endfor %}
+      </div>
+    <h1 class="authors_header">Random 20 Authors</h1>
+
+    <!-- Randomly select 20 authors and display here -->
+    <div class="authors_card authors_list_container">
+    {% for author in random_authors %}  
+      <a href="{{author.get_absolute_url}}">{{author.name}}</a>
+    {% endfor %}
+
+    </div>
+  </section>
+{% endblock %}

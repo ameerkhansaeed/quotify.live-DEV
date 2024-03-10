@@ -1,0 +1,52 @@
+{% extends "quotify/base.html" %}
+{% load static %}
+
+
+{% block canonical %}
+<link rel="canonical" href="https://www.quotify.live/{{author.get_absolute_url}}">
+{% endblock %}
+
+{% block title %} {{author.name}} {% endblock %}
+{% block content %}
+
+
+<div class="main_container">
+<h1 class="authors_header smaller text_align_left">Quotes by <!-- Author's Name --> <span class="author_name">{{author.name}}</span></h1>
+{% for quote in quotes %}
+<div class="quote_container">
+    <p>"{{quote.text}}"</p>
+    <div class="quote_category_container">
+    {% for category in quote.categories.all %}
+    <a href="{{category.get_absolute_url}}" class="quote_category">{{category.name}}</a>
+    {% endfor %}
+    </div>
+</div>
+{% endfor%}
+
+
+<div class="pagination_container">
+    <ul class="pagination">
+        {% if quotes.has_previous %}
+            <li><a href="?page=1"><button class="page">&lt;&lt;</button></a></li>
+            <li><a href="?page={{quotes.previous_page_number}}"><button class="page">{{quotes.previous_page_number}}</button></a></li>
+        {% endif %}
+
+        <li><button class="page active">{{quotes.number}}</button></li>
+
+        {% if quotes.has_next %}
+            {% if quotes.next_page_number|add:1 == quotes.paginator.num_pages %}
+                <li><a href="?page={{quotes.next_page_number}}"><button class="page">{{quotes.next_page_number}}</button></a></li>
+                <li><a href="?page={{quotes.paginator.num_pages}}"><button class="page">{{quotes.paginator.num_pages}}</button></a></li>
+            {% elif quotes.next_page_number == quotes.paginator.num_pages %}
+                <li><a href="?page={{quotes.paginator.num_pages}}"><button class="page">{{quotes.paginator.num_pages}}</button></a></li>
+            {% else %}
+                <li><a href="?page={{quotes.next_page_number}}"><button class="page">{{quotes.next_page_number}}</button></a></li>
+                <li><button class="page">...</button></li>
+                <li><a href="?page={{quotes.paginator.num_pages}}"><button class="page">{{quotes.paginator.num_pages}}</button></a></li>
+            {% endif %}
+            <li><a href="?page={{quotes.paginator.num_pages}}"><button class="page">&gt;&gt;</button></a></li>
+        {% endif %}
+    </ul>
+</div>
+
+{% endblock %}

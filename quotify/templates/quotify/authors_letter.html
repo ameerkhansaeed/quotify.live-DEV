@@ -1,0 +1,68 @@
+{% extends 'quotify/base.html' %}
+
+
+{% block title %}Quotify - Authors "{{letter|upper}}" {% endblock %}
+
+{% block content %}
+<section class="authors_container ">
+  <h1 class="authors_header">Authors</h1>
+    <div class="authors_button">
+
+      <!-- Each button opens a page with the author's quotes -->
+      {% for letter in abc %}
+        <a href="{% url 'letters' letter %}"><button class="letters">{{letter}}</button></a>
+      {% endfor %}
+    </div>
+    <h1 class="authors_header">Authors by "{{letter|upper}}" letter</h1>
+
+    <div class="authors_card authors_list_container">
+      {% for author in authors %}  
+      <a href="{{author.get_absolute_url}}">{{author.name}}</a>
+      {% endfor %}
+    </div>
+    {% comment %} <div class="pagination">
+        <span class="step-links">
+            {% if objects.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ objects.previous_page_number }}">previous</a>
+            {% endif %}
+    
+            <span class="current">
+                Страница {{ objects.number }} из {{ objects.paginator.num_pages }}.
+            </span>
+    
+            {% if objects.has_next %}
+                <a href="?page={{ objects.next_page_number }}">next</a>
+                <a href="?page={{ objects.peginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div> {% endcomment %}
+    
+</section>
+<div class="pagination_container">
+  <ul class="pagination">
+      {% if authors.has_previous %}
+          <li><a href="?page=1"><button class="page">&lt;&lt;</button></a></li>
+          <li><a href="?page={{authors.previous_page_number}}"><button class="page">{{authors.previous_page_number}}</button></a></li>
+      {% endif %}
+
+      <li><button class="page active">{{authors.number}}</button></li>
+
+      {% if authors.has_next %}
+          {% if authors.next_page_number|add:1 == authors.paginator.num_pages %}
+              <li><a href="?page={{authors.next_page_number}}"><button class="page">{{authors.next_page_number}}</button></a></li>
+              <li><a href="?page={{authors.paginator.num_pages}}"><button class="page">{{authors.paginator.num_pages}}</button></a></li>
+          {% elif authors.next_page_number == authors.paginator.num_pages %}
+              <li><a href="?page={{authors.paginator.num_pages}}"><button class="page">{{authors.paginator.num_pages}}</button></a></li>
+          {% else %}
+              <li><a href="?page={{authors.next_page_number}}"><button class="page">{{authors.next_page_number}}</button></a></li>
+              <li><button class="page">...</button></li>
+              <li><a href="?page={{authors.paginator.num_pages}}"><button class="page">{{authors.paginator.num_pages}}</button></a></li>
+          {% endif %}
+          <li><a href="?page={{authors.paginator.num_pages}}"><button class="page">&gt;&gt;</button></a></li>
+      {% endif %}
+  </ul>
+</div>
+
+
+{% endblock %}

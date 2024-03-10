@@ -1,0 +1,32 @@
+{% extends "quotify/base.html" %}
+{% load static %}
+{% block content %}
+<div class="hero_section grid">
+    <h1 class="hero">TIMELESS <br>QUOTES!</h1>
+    <img src="{% static 'quotify/assets/welcome-logo.PNG' %}" alt="quotify logo" class="welcome_logo">
+    <p class="hero_text">Welcome to Quotify.live, your gateway to a universe of inspiration and insight.</p>
+  </div>
+  <section class="information">
+    <h2>Immerse</h2>
+    <p>yourself in the beauty of words as we curate a symphony of quotes from brilliant minds across time and disciplines. From the profound to the poetic, our collection is a celebration of wisdom, ready to infuse your daily life with inspiration.</p>
+  </section>
+
+  <section class="information">
+    <h2>Today's Quote</h2>
+    <p>Begin each day with a spark of motivation. Discover a handpicked quote that resonates with the rhythm of your today.</p>
+    <a href="{% url 'todays_quote' %}" class="info_link">Today's Quote</a>
+  </section>
+
+  <section class="information">
+    <h2>Authors</h2>
+    <p>Explore the minds that shaped the world with their words. Dive into the thoughts of visionaries, philosophers, and storytellers who have left an indelible mark on humanity.</p>
+    <a href="{% url 'authors' %}" class="info_link">Authors</a>
+  </section>
+
+  <section class="information">
+    <h2>Categories</h2>
+    <p>Navigate our curated categories to find quotes tailored to your mood and interests. Whether seeking solace, motivation, or laughter, there's a category for every facet of life.</p>
+    <a href="{% url 'categories' %}" class="info_link">Categories</a>
+  </section>
+
+{% endblock %}

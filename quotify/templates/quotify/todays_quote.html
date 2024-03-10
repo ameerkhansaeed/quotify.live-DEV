@@ -1,0 +1,13 @@
+{% extends "quotify/base.html" %}
+{% block title%} Quote Of The Day {% endblock %}
+{% block content %}
+  <div class="todays_quote" style="margin-top: 5%">
+    <p class="quote_header">Today's Quote</p>
+    
+    <!-- This part should be imported for the Database -->
+    <p class="quote">"{{quote}}"</p>
+    <!-- When clickin on the author's name it should open author's page-->
+    <a href="{{author.get_absolute_url}}"><p class="author">- {{author}} -</p></a>
+  </div>
+
+{% endblock %}

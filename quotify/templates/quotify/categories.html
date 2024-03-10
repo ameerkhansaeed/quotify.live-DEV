@@ -1,0 +1,16 @@
+{% extends 'quotify/base.html' %}
+{% load static %}
+{% block title %}Quotes Categories {% endblock %}
+{% block content %}
+<section class="categories_container">
+<h1 class="authors_header">Categories</h1>
+
+<!-- Display all categories here -->
+<div class="category_link">
+    {% for category in categories %}
+    <a href="{{category.get_absolute_url}}" class="categories">{{category.name}}</a>
+    {% endfor %}
+</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "quotify/base.html" %}
+
+{% block tutle %}Not found 404 {% endblock %}
+
+{% block content %}
+
+
+  <div class="error_page">
+    <h1 class="error_font">404</h1>
+    <p class="bold_font">Page not found ~_~</p>
+    <p>This page seems to be on vacation. We apologize for the inconvenience.</p>
+    <p class="error_page_link"><a href="{% url 'home' %}">Let's go home</a></p>
+  </div>
+
+
+{% endblock %}
