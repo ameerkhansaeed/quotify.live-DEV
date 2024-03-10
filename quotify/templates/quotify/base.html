@@ -26,12 +26,12 @@
   {% endblock %}
   <title>{% block title %}Quotify.live - Quotes from all around the world{% endblock %}</title>
   {% load static %}
+
   {% load compress %}
   {% compress css %}
   <link rel="stylesheet" href="{% static 'quotify/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'quotify/css/pagination.css' %}">
   {% endcompress %}
-  <link rel="icon" type="image/x-icon" href="{% static 'quotify/assets/favicon_quotify.png' %}">
 </head>
 <body>
     {% block navbar %}
