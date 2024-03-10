@@ -26,12 +26,13 @@
   {% endblock %}
   <title>{% block title %}Quotify.live - Quotes from all around the world{% endblock %}</title>
   {% load static %}
+  <link rel="icon" type="image/x-icon" href="{% static 'quotify/assets/favicon_quotify.png' %}">
 
-  {% load compress %}
-  {% compress css %}
+  {% comment %} {% load compress %} {% endcomment %}
+  {% comment %} {% compress css %} {% endcomment %}
   <link rel="stylesheet" href="{% static 'quotify/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'quotify/css/pagination.css' %}">
-  {% endcompress %}
+  {% comment %} {% endcompress %} {% endcomment %}
 </head>
 <body>
     {% block navbar %}
@@ -100,10 +101,10 @@
           <li><a href="https://www.instagram.com/quotify.live"><img src="{% static 'quotify/assets/instagram-logo.png' %}" alt="instagram" class="social_logo"></a></li>
         </ul>
       </footer>
-      {% compress js %}
+      {% comment %} {% compress js %} {% endcomment %}
       <script src="{% static 'quotify/js/pagination.js' %}"></script>
       <script src="{% static 'quotify/js/app.js' %}"></script>
-      {% endcompress %}
+      {% comment %} {% endcompress %} {% endcomment %}
       {% endblock %}
 </body>
 </html>
