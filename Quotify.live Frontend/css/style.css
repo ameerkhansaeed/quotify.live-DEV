@@ -229,6 +229,7 @@ header img {
   gap: 0.8em;
   justify-content: center;
   margin-bottom: 1em;
+  margin: 0 auto;
 }
 
 .searchbox_mobile input {
