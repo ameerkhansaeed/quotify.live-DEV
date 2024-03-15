@@ -106,6 +106,7 @@ header {
   max-width: 1920px;
   margin: 0 auto;
   min-height: 2rem;
+  max-height: 5rem;
   position: sticky;
   top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.879);
