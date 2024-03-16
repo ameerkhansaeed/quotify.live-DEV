@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-70&ojjpn7_ge#@8ah7jsl=c-&pudr$tzb$6e+@=1i-6f6n%d1u
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["*", "quotify.live", "www.quotify.live"]
+ALLOWED_HOSTS = ["127.0.0.1", "quotify.live", "www.quotify.live"]
 
 
 # Application definition

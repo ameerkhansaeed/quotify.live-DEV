@@ -49,6 +49,7 @@ class Quote(models.Model):
 
     class Meta:
         indexes = [models.Index(fields=["text"])]
+        ordering = ("author", )
 
 
 class MonthlyQuoteList(models.Model):
