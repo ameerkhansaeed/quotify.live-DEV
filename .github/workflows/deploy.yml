@@ -18,4 +18,4 @@ jobs:
         echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 -d > ssh_key.pem
         chmod 600 ssh_key.pem
         scp -i ssh_key.pem deploy_script.sh ubuntu@ec2-51-20-73-160.eu-north-1.compute.amazonaws.com:/home/ubuntu/scripts/deploy_script.sh
-        ssh -i ssh_key.pem ubuntu@ec2-51-20-73-160.eu-north
+        ssh -i ssh_key.pem ubuntu@ec2-51-20-73-160.eu-north-1.compute.amazonaws.com 'bash -s' < /home/ubuntu/scripts/deploy_script.sh
