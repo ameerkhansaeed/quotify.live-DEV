@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-70&ojjpn7_ge#@8ah7jsl=c-&pudr$tzb$6e+@=1i-6f6n%d1u"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
-ALLOWED_HOSTS = ["*", "127.0.0.1", "quotify.live", "www.quotify.live"]
+ALLOWED_HOSTS = ["51.20.73.160", "quotify.live", "www.quotify.live"]
 
 
 # Application definition

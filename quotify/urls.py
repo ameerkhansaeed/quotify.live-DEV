@@ -35,6 +35,13 @@ urlpatterns = [
         name="robots.txt",
     ),
     path(
+        "ads.txt",
+        TemplateView.as_view(
+            template_name="quotify/ads.txt", content_type="text/plain"
+        ),
+        name="ads.txt",
+    ),
+    path(
         "sitemap.xml",
         sitemap,
         {"sitemaps": sitemaps},
