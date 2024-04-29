@@ -29,7 +29,7 @@ The website is currently live at [Quotify-live](https://quotify.live). Users can
 
 - Backend: [Asadhimself](https://github.com/Asadhimself) <img height="20" width="20" src="https://cdn.simpleicons.org/github/white" />
 - Frontend: [ameerkhansaeed](https://github.com/ameerkansaeed) <img height="20" width="20" src="https://cdn.simpleicons.org/github/white" /> <br>
-You can explore frontend code for itself [here](https://github.com/ameerkhansaeed/quotify.live-DEV/branch/frontend)
+You can explore frontend code for itself [here](https://github.com/ameerkhansaeed/quotify.live-DEV/tree/frontend)
 
 ## Disclaimer
 
